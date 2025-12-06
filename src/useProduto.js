@@ -46,7 +46,13 @@ navigate(`/detalhes/${id}`);
 
 const alterarProduto = (produtoEditado) => {
 
-    // A lógica de alteração foi removida conforme a versão anterior.
+    const novaLista = listaProdutos.map((produto) =>
+      produto.id === Number(produtoEditado.id)
+        ? { ...produto, nome: produtoEditado.nome, valor: produtoEditado.valor }
+        : produto
+    );
+    setListaProdutos(novaLista);
+    navigate("/");
 }; 
 
 return {
