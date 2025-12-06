@@ -1,16 +1,16 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import TelaProduto from "./TelaProduto";
 import TelaProdutoEditar from "./TelaProdutoEditar";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<TelaProduto />} />
 
         <Route path="/detalhes/:id" element={<TelaProdutoEditar />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
